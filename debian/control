@@ -17,3 +17,14 @@ Description: SMOKE development tools
  Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings, 
  as well as some bindings for the Wt library.
 
+Package: libsmokebase3
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: Qt SMOKE libraries
+ SMOKE libraries are part of the bindings used for Qt and KDE. This package
+ contains the SMOKE base library.
+ .
+ SMOKE provides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
+
