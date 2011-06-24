@@ -1,0 +1,26 @@
+Patch by Sune Vuorela
+Fixes segfault seen on arm, but theoretically could happen more places.
+token_text can return a null pointer.
+Index: b/type_compiler.cpp
+===================================================================
+--- a/type_compiler.cpp
++++ b/type_compiler.cpp
+@@ -191,11 +191,13 @@
+ 
+ void TypeCompiler::visitPtrOperator(PtrOperatorAST* node)
+ {
+-    if (token_text(m_session->token_stream->kind(node->op))[0] == '*') {
+-        QPair<bool, bool> cv = m_visitor->parseCv(node->cv);
+-        pointerDepth.append(cv.first);
+-    } else if (token_text(m_session->token_stream->kind(node->op))[0] == '&') {
+-        isRef = true;
++    if(token_text(m_session->token_stream->kind(node->op))) {
++        if (token_text(m_session->token_stream->kind(node->op))[0] == '*') {
++            QPair<bool, bool> cv = m_visitor->parseCv(node->cv);
++            pointerDepth.append(cv.first);
++        } else if (token_text(m_session->token_stream->kind(node->op))[0] == '&') {
++            isRef = true;
++        }
+     }
+ }
+ 
