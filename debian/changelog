@@ -2,5 +2,6 @@ smokegen (4:4.6.80-1) UNRELEASED; urgency=low
 
   [ David Palacio ]
   * Source package `kdebindings` split.
+  * Disable patch smokegen_load_system_defines.diff
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 17 Jun 2011 22:01:09 -0500
