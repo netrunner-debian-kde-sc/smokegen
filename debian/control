@@ -28,3 +28,13 @@ Description: Qt SMOKE libraries
  SMOKE provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
 
+Package: smokegen-dbg
+Section: debug
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: kdebindings-dbg
+Replaces: kdebindings-dbg
+Architecture: any
+Description: SMOKE development tools -- debug symbols
+ This package contains the debug symbols for the SMOKE generator, used to
+ investigate problems with its libraries and binaries.
+
