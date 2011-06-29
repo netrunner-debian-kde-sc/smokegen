@@ -13,8 +13,8 @@ Section: devel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: SMOKE development tools
- This package contains the development tools to do bindings with the 
- Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings, 
+ This package contains the development tools to do bindings with the
+ Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings,
  as well as some bindings for the Wt library.
 
 Package: libsmokebase3
