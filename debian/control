@@ -34,6 +34,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Breaks: kdebindings-dbg
 Replaces: kdebindings-dbg
 Architecture: any
+Priority: extra
 Description: SMOKE development tools -- debug symbols
  This package contains the debug symbols for the SMOKE generator, used to
  investigate problems with its libraries and binaries.
