@@ -71,7 +71,8 @@ License: BSD
  Public License version 2 can be found in "/usr/share/common-licenses/BSD".
 
 Files: debian/*
-Copyright: 2011 David Palacio <dpalacio@orbitalibre.org>
+Copyright: 2008-2011 Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2011 David Palacio <dpalacio@orbitalibre.org>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
