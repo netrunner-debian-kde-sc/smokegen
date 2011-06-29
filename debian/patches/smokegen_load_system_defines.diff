@@ -21,7 +21,7 @@ support some setuphelpers calls.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -22,6 +22,8 @@ set(generator_SRC
+@@ -30,6 +30,8 @@ set(generator_SRC
      type_compiler.cpp
      name_compiler.cpp
      type.cpp
@@ -123,7 +123,7 @@ support some setuphelpers calls.
          exportMacro = new rpp::pp_macro;
 --- /dev/null
 +++ b/setuphelpers.cpp
-@@ -0,0 +1,170 @@
+@@ -0,0 +1,167 @@
 +/*
 +* This file is part of KDevelop
 +*
@@ -186,9 +186,6 @@ support some setuphelpers calls.
 +    //Used in several headers like sys/time.h
 +    insertMacro( macros, rpp::pp_macro("__restrict") );
 +    insertMacro( macros, rpp::pp_macro("__extension__") );
-+    //Add macros that allow special treatment when within kdevelop
-+    insertMacro( macros, rpp::pp_macro("IN_KDEVELOP_PARSER") );
-+    insertMacro( macros, rpp::pp_macro("IN_IDE_PARSER") );
 +    {
 +      //Used in several headers like sys/time.h
 +      rpp::pp_macro m("__const");
