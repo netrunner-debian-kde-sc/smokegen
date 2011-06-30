@@ -1,11 +1,9 @@
 Patch by Sune Vuorela
 Fixes segfault seen on arm, but theoretically could happen more places.
 token_text can return a null pointer.
-Index: b/type_compiler.cpp
-===================================================================
 --- a/type_compiler.cpp
 +++ b/type_compiler.cpp
-@@ -191,11 +191,13 @@
+@@ -191,11 +191,13 @@ void TypeCompiler::visitParameterDeclara
  
  void TypeCompiler::visitPtrOperator(PtrOperatorAST* node)
  {
