@@ -30,7 +30,7 @@ Description: SMOKE base library
 
 Package: smokegen-dbg
 Section: debug
-Depends: ${shlibs:Depends}, ${misc:Depends}, libsmokebase3 (= ${binary:Version})
+Depends: ${misc:Depends}, libsmokebase3 (= ${binary:Version})
 Recommends: smoke-dev-tools (= ${binary:Version})
 Breaks: kdebindings-dbg
 Replaces: kdebindings-dbg
