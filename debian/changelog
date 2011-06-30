@@ -1,6 +1,28 @@
 smokegen (4:4.6.80-1) UNRELEASED; urgency=low
 
+  * Initial release, split from the kdebindings source.
+
   [ David Palacio ]
-  * Source package `kdebindings` split.
+  * Switch to dh7:
+    - clean rules
+  * Adapt watch file to the new source name.
+  * Pick smokegen related patches from the kdebindings package and include
+    them in this package.
+  * Adapt Vcs fields.
+  * Switch copyright to the DEP5 format, revision 174.
+
+  [ Pino Toscano ]
+  * Update patch smokegen_load_system_defines.diff:
+    - do not define IN_KDEVELOP_PARSER and IN_IDE_PARSER, as they are reserved
+      for kdevelop
+  * Update rules:
+    - pass --list-missing to dh_install
+  * Update control:
+    - add a smokegen-dbg package, making it break/replace kdebindings-dbg
+  * Update copyright.
+  * Update lintian overrides for smoke-dev-tools.
+
+  [ Modestas Vainius ]
+  * Remove myself from Uploaders.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 17 Jun 2011 22:01:09 -0500
