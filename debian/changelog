@@ -9,7 +9,7 @@ smokegen (4:4.6.80-1) UNRELEASED; urgency=low
   * Pick smokegen related patches from the kdebindings package and include
     them in this package.
   * Adapt Vcs fields.
-  * Switch copyright to the DEP5 format, revision 174.
+  * Switch copyright to the DEP-5 format, revision 174.
 
   [ Pino Toscano ]
   * Update the patches:
