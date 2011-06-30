@@ -17,6 +17,7 @@ smokegen (4:4.6.80-1) UNRELEASED; urgency=low
       and IN_IDE_PARSER, as they are reserved for kdevelop
     - strip sequence numbers from the filenames
     - refresh
+    - add DEP-3 headers for patches which didn't have them
   * Update rules:
     - pass --list-missing to dh_install
   * Update control:

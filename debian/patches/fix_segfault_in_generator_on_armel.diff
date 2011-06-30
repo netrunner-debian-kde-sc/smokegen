@@ -1,6 +1,10 @@
-Patch by Sune Vuorela
-Fixes segfault seen on arm, but theoretically could happen more places.
-token_text can return a null pointer.
+Author: Sune Vuorela <sune@debian.org>
+Description: Fix segfault when trying to parse/write the akonadi smoke part
+ Fixes segfault seen on arm, but theoretically could happen more places.
+ token_text can return a null pointer.
+ Patch acknowledged by upstream.
+Last-Update: 2010-05-11
+
 --- a/type_compiler.cpp
 +++ b/type_compiler.cpp
 @@ -191,11 +191,13 @@ void TypeCompiler::visitParameterDeclara

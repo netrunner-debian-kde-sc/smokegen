@@ -1,3 +1,7 @@
+Author: Sune Vuorela <sune@debian.org>
+Description: Version the cppparser library
+Last-Update: 2010-03-01
+
 --- a/parser/CMakeLists.txt
 +++ b/parser/CMakeLists.txt
 @@ -36,6 +36,7 @@ set(cppparser_LIB_SRCS
