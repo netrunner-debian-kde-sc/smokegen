@@ -12,9 +12,11 @@ smokegen (4:4.6.80-1) UNRELEASED; urgency=low
   * Switch copyright to the DEP5 format, revision 174.
 
   [ Pino Toscano ]
-  * Update patch smokegen_load_system_defines.diff:
-    - do not define IN_KDEVELOP_PARSER and IN_IDE_PARSER, as they are reserved
-      for kdevelop
+  * Update the patches:
+    - smokegen_load_system_defines.diff: do not define IN_KDEVELOP_PARSER
+      and IN_IDE_PARSER, as they are reserved for kdevelop
+    - strip sequence numbers from the filenames
+    - refresh
   * Update rules:
     - pass --list-missing to dh_install
   * Update control:
