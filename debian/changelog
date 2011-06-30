@@ -22,6 +22,7 @@ smokegen (4:4.6.80-1) UNRELEASED; urgency=low
     - pass --list-missing to dh_install
   * Update control:
     - add a smokegen-dbg package, making it break/replace kdebindings-dbg
+    - small touches to the descriptions
   * Update copyright.
   * Update lintian overrides for smoke-dev-tools.
 
