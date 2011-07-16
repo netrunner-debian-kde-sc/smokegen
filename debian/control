@@ -31,7 +31,7 @@ Description: SMOKE base library
 Package: smokegen-dbg
 Section: debug
 Depends: ${misc:Depends}, libsmokebase3 (= ${binary:Version})
-Recommends: smoke-dev-tools (= ${binary:Version})
+Recommends: smoke-dev-tools (= ${binary:Version}), libqt4-dbg
 Breaks: kdebindings-dbg
 Replaces: kdebindings-dbg
 Architecture: any
