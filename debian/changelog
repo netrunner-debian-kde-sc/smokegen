@@ -1,4 +1,4 @@
-smokegen (4:4.7.0-1) UNRELEASED; urgency=low
+smokegen (4:4.7.0-1) unstable; urgency=low
 
   * Initial release, split from the kdebindings source.
 
@@ -29,4 +29,4 @@ smokegen (4:4.7.0-1) UNRELEASED; urgency=low
   [ Modestas Vainius ]
   * Remove myself from Uploaders.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 17 Jun 2011 22:01:09 -0500
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 26 Jul 2011 16:11:36 +0200
