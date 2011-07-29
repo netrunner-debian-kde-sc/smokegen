@@ -2,7 +2,7 @@ smokegen (4:4.7.0-2) UNRELEASED; urgency=low
 
   [ Pino Toscano ]
   * Make smoke-dev-tools break/replace libsmokeqt4-dev < 4:4.7.0, as
-    /usr/include/smoke.h as been moved here. (Closes: #635579)
+    /usr/include/smoke.h has been moved here. (Closes: #635579)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 27 Jul 2011 14:21:40 +0200
 
