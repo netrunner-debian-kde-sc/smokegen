@@ -4,6 +4,7 @@ smokegen (4:4.7.1-1) UNRELEASED; urgency=low
 
   [ Pino Toscano ]
   * Update patch smokegen_load_system_defines.diff to the upstream sources.
+  * Small touches to the descriptions.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 10 Aug 2011 23:49:23 +0200
 

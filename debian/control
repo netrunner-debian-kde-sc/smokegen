@@ -15,6 +15,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Breaks: libsmokeqt4-dev (<< 4:4.7.0)
 Replaces: libsmokeqt4-dev (<< 4:4.7.0)
 Description: SMOKE development tools
+ SMOKE provides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
+ .
  This package contains the development tools to do bindings with the
  Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings,
  as well as some bindings for the Wt library.
@@ -39,6 +42,9 @@ Replaces: kdebindings-dbg
 Architecture: any
 Priority: extra
 Description: SMOKE development tools -- debug symbols
+ SMOKE provides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
+ .
  This package contains the debug symbols for the SMOKE generator and
  libraries, used to investigate problems in them.
 
