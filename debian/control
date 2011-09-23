@@ -11,7 +11,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-sc/smokegen.git;a=s
 
 Package: smoke-dev-tools
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libsmokebase3 (= ${binary:Version})
 Breaks: libsmokeqt4-dev (<< 4:4.7.0)
 Replaces: libsmokeqt4-dev (<< 4:4.7.0)
 Description: SMOKE development tools
