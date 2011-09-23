@@ -8,6 +8,7 @@ smokegen (4:4.7.1-1) UNRELEASED; urgency=low
   * Update installed files.
   * Tighten the libsmokebase dependency of smoke-gen-tools to the current
     version.
+  * Generate libsmokebase shlibs based on the current version.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 10 Aug 2011 23:49:23 +0200
 
