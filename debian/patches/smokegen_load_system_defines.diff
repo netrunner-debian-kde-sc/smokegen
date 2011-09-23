@@ -1,8 +1,9 @@
 From: Modestas Vainius <modax@debian.org>
+From: Pino Toscano <pino@debian.org>
 Subject: get system #defines from current compiler
 Bug-Debian: http://bugs.debian.org/626631
 Forwarded: no
-Last-Update: 2011-05-13
+Last-Update: 2011-09-23
 Origin: vendor
 
 Steal and port some setuphelpers code from the latest kdevelop (b3104e25) which
@@ -40,10 +41,11 @@ support some setuphelpers calls.
  
  #include <rpp/pp-environment.h>
  #include <rpp/pp-macro.h>
-@@ -38,74 +39,18 @@ Preprocessor::Preprocessor(const QList<Q
+@@ -39,94 +40,8 @@ Preprocessor::Preprocessor(const QList<Q
+     m_topBlock = new rpp::MacroBlock(0);
      
      // some basic definitions
-     rpp::pp_macro* exportMacro = new rpp::pp_macro;
+-    rpp::pp_macro* exportMacro = new rpp::pp_macro;
 -    exportMacro->name = IndexedString("__cplusplus");
 -    exportMacro->definition.append(IndexedString('1'));
 -    exportMacro->function_like = false;
@@ -59,12 +61,11 @@ support some setuphelpers calls.
 -
 -    exportMacro = new rpp::pp_macro;
 -    exportMacro->name = IndexedString("__GNUC_MINOR__");
-+    exportMacro->name = IndexedString("__SMOKEGEN_RUN__");
-     exportMacro->definition.append(IndexedString('1'));
-     exportMacro->function_like = false;
-     exportMacro->variadics = false;
-     m_topBlock->setMacro(exportMacro);
- 
+-    exportMacro->definition.append(IndexedString('1'));
+-    exportMacro->function_like = false;
+-    exportMacro->variadics = false;
+-    m_topBlock->setMacro(exportMacro);
+-
 -    exportMacro = new rpp::pp_macro;
 -#if defined(Q_OS_LINUX)
 -    exportMacro->name = IndexedString("__linux__");
@@ -99,8 +100,7 @@ support some setuphelpers calls.
 -    exportMacro->variadics = false;
 -    m_topBlock->setMacro(exportMacro);
 -#endif
-+    CppTools::setupStandardMacros(*m_topBlock);
- 
+-
 -    // ansidecl.h will define macros for keywords if we don't define __STDC__
 -    exportMacro = new rpp::pp_macro;
 -    exportMacro->name = IndexedString("__STDC__");
@@ -108,19 +108,48 @@ support some setuphelpers calls.
 -    exportMacro->variadics = false;
 -    m_topBlock->setMacro(exportMacro);
 -
+-    // the following macros are gcc specialties
 -    exportMacro = new rpp::pp_macro;
--    exportMacro->name = IndexedString("__SMOKEGEN_RUN__");
--    exportMacro->definition.append(IndexedString('1'));
+-    exportMacro->name = IndexedString("__extension__");
 -    exportMacro->function_like = false;
 -    exportMacro->variadics = false;
 -    m_topBlock->setMacro(exportMacro);
+-
+-    exportMacro = new rpp::pp_macro;
+-    exportMacro->name = IndexedString("__restrict");
+-    exportMacro->function_like = false;
+-    exportMacro->variadics = false;
+-    m_topBlock->setMacro(exportMacro);
+-
+-    exportMacro = new rpp::pp_macro;
+-    exportMacro->name = IndexedString("__const");
+-    exportMacro->definition.append(IndexedString("const"));
+-    exportMacro->function_like = false;
+-    exportMacro->variadics = false;
+-    m_topBlock->setMacro(exportMacro);
+-
+-    exportMacro = new rpp::pp_macro;
+-    exportMacro->name = IndexedString("__attribute__");
+-    exportMacro->function_like = true;
+-    exportMacro->variadics = false;
+-    m_topBlock->setMacro(exportMacro);
++    rpp::pp_macro* exportMacro = 0;
++    CppTools::setupStandardMacros(*m_topBlock);
+ 
+     exportMacro = new rpp::pp_macro;
+     exportMacro->name = IndexedString("__SMOKEGEN_RUN__");
+@@ -135,6 +50,11 @@ Preprocessor::Preprocessor(const QList<Q
+     exportMacro->variadics = false;
+     m_topBlock->setMacro(exportMacro);
+ 
 +    // Do not add standard include paths
 +//    foreach (QString dir, CppTools::setupStandardIncludePaths()) {
 +//        m_includeDirs << QDir(dir);
 +//    }
- 
++
      foreach (QString define, defines) {
          exportMacro = new rpp::pp_macro;
+         exportMacro->name = IndexedString(define);
 --- /dev/null
 +++ b/setuphelpers.cpp
 @@ -0,0 +1,167 @@
