@@ -9,6 +9,8 @@ smokegen (4:4.7.1-1) UNRELEASED; urgency=low
   * Tighten the libsmokebase dependency of smoke-dev-tools to the current
     version.
   * Generate libsmokebase shlibs based on the current version.
+  * Manually export CXXFLAGS and LDFLAGS from dpkg-buildflags now,
+    as dpkg-buildpackage does not do that anymore.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 10 Aug 2011 23:49:23 +0200
 
