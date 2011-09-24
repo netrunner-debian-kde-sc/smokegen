@@ -1,4 +1,4 @@
-smokegen (4:4.7.1-1) UNRELEASED; urgency=low
+smokegen (4:4.7.1-1) unstable; urgency=low
 
   * New upstream release.
 
@@ -12,7 +12,7 @@ smokegen (4:4.7.1-1) UNRELEASED; urgency=low
   * Manually export CXXFLAGS and LDFLAGS from dpkg-buildflags now,
     as dpkg-buildpackage does not do that anymore.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 10 Aug 2011 23:49:23 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 24 Sep 2011 12:04:41 +0200
 
 smokegen (4:4.7.0-2) unstable; urgency=low
 
