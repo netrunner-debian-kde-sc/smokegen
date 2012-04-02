@@ -9,6 +9,18 @@ smokegen (4:4.8.0-1) UNRELEASED; urgency=low
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Feb 2012 19:30:14 -0500
 
+smokegen (4:4.7.4-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Bump Standards-Version to 3.9.3, no changes required.
+  * Bump debhelper build dependency to >= 9, and compat to 9.
+  * Do not manually export CXXFLAGS and LDFLAGS now, since compat v9 does
+    that already.
+  * Update copyright for myself, for last year and the current one.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 02 Apr 2012 13:31:04 +0200
+
 smokegen (4:4.7.1-1) unstable; urgency=low
 
   * New upstream release.

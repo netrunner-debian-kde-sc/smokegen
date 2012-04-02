@@ -106,6 +106,7 @@ License: GPL-2+
 Files: debian/*
 Copyright: 2008-2011 Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
            2011 David Palacio <dpalacio@orbitalibre.org>
+           2011-2012 Pino Toscano <pino@debian.org>
 License: GPL-2+
 
 
