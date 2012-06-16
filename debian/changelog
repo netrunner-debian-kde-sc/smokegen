@@ -1,13 +1,14 @@
-smokegen (4:4.8.0-1) UNRELEASED; urgency=low
+smokegen (4:4.8.4-1) unstable; urgency=low
 
   * New upstream release.
+  * Team upload
 
   [ David Palacio ]
   * Update patches:
     - Refresh version_cppparser_library.diff.
     - Remove patch fix_segfault_in_generator_on_armel.diff. Applied upstream.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Feb 2012 19:30:14 -0500
+ -- Sune Vuorela <sune@debian.org>  Sun, 17 Jun 2012 01:31:16 +0200
 
 smokegen (4:4.7.4-1) unstable; urgency=low
 
