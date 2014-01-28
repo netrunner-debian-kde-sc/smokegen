@@ -1,7 +1,7 @@
 usr/bin/smokeapi
 usr/bin/smokegen
-usr/include/smokegen/*.h
 usr/include/smoke.h
+usr/include/smokegen/*.h
 usr/lib/libcppparser.so.0*
 usr/lib/libsmokebase.so
 usr/lib/smokegen/generator_*.so
