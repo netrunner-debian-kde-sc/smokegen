@@ -8,7 +8,7 @@ Uploaders: Torsten Marek <shlomme@debian.org>,
            Michael Meskes <meskes@debian.org>,
            Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake, debhelper (>= 9), libqt4-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://projects.kde.org/projects/kde/kdebindings/smoke/smokegen
 Vcs-Git: git://anonscm.debian.org/git/pkg-kde/kde-sc/smokegen.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-sc/smokegen.git;a=summary
