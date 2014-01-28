@@ -1,6 +1,7 @@
 smokegen (4:4.11.5-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Add abi-compliance-checker info.
 
  -- Maximiliano Curia <maxy@debian.org>  Tue, 28 Jan 2014 10:57:47 +0100
 
