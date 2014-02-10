@@ -1,8 +1,8 @@
-smokegen (4:4.12.2-1) UNRELEASED; urgency=medium
+smokegen (4:4.12.2-1) experimental; urgency=medium
 
   * New upstream release.
 
- -- Maximiliano Curia <maxy@debian.org>  Tue, 04 Feb 2014 19:28:27 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:32:05 +0100
 
 smokegen (4:4.11.5-1) unstable; urgency=low
 
