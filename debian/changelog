@@ -1,3 +1,9 @@
+smokegen (4:4.14.2-1~) UNRELEASED; urgency=medium
+
+  * New upstream release (4.14.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 16 Oct 2014 13:47:27 +0200
+
 smokegen (4:4.14.0-2) unstable; urgency=medium
 
   * Remove patch: smokegen_load_system_defines.diff
