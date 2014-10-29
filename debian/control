@@ -1,7 +1,7 @@
 Source: smokegen
 Section: devel
 Priority: optional
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Torsten Marek <shlomme@debian.org>,
            Sune Vuorela <sune@debian.org>,
            David Palacio <dpalacio@orbitalibre.org>,
