@@ -8,14 +8,14 @@ Uploaders: Torsten Marek <shlomme@debian.org>,
            Michael Meskes <meskes@debian.org>,
            Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake, debhelper (>= 9), libqt4-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://projects.kde.org/projects/kde/kdebindings/smoke/smokegen
-Vcs-Git: git://anonscm.debian.org/git/pkg-kde/kde-sc/smokegen.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-sc/smokegen.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-sc/smokegen.git;a=summary
 
 Package: smoke-dev-tools
 Architecture: any
-Depends: libsmokebase3 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libsmokebase3v5 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Breaks: libsmokeqt4-dev (<< 4:4.7.0)
 Replaces: libsmokeqt4-dev (<< 4:4.7.0)
 Description: SMOKE development tools
@@ -26,10 +26,12 @@ Description: SMOKE development tools
  Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings,
  as well as some bindings for the Wt library.
 
-Package: libsmokebase3
+Package: libsmokebase3v5
 Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Architecture: any
+Conflicts: libsmokebase3
+Replaces: libsmokebase3
 Description: SMOKE base library
  SMOKE libraries are part of the bindings used for Qt and KDE. This package
  contains the SMOKE base library.
@@ -39,7 +41,7 @@ Description: SMOKE base library
 
 Package: smokegen-dbg
 Section: debug
-Depends: libsmokebase3 (= ${binary:Version}), ${misc:Depends}
+Depends: libsmokebase3v5 (= ${binary:Version}), ${misc:Depends}
 Recommends: libqt4-dbg, smoke-dev-tools (= ${binary:Version})
 Breaks: kdebindings-dbg
 Replaces: kdebindings-dbg

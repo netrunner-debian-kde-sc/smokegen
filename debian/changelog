@@ -1,3 +1,13 @@
+smokegen (4:4.14.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Bump libsmokebase3 to libsmokebase3v5 for libstdc++6 updates
+  * Update Vcs-Git to use the canonical location
+  * Bump standards version to 3.9.6 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 16 Aug 2015 18:59:59 -0400
+
 smokegen (4:4.14.2-1) unstable; urgency=medium
 
   * New upstream release (4.14.2).
